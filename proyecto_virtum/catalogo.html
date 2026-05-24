@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Virtum - Catálogo</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-black text-white font-sans">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md border-b border-zinc-800 z-50">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- IZQUIERDA -->
+      <div class="flex items-center gap-6">
+
+        <!-- LOGO -->
+        <h1 class="text-3xl font-black tracking-widest">
+          VIRTUM
+        </h1>
+
+        <!-- BOTÓN FILTROS -->
+        <button
+          id="abrirFiltro"
+          class="flex items-center gap-2 bg-zinc-900 border border-zinc-700 px-5 py-3 rounded-2xl hover:border-white transition uppercase tracking-widest text-sm"
+        >
+
+          <!-- ICONO -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2l-7 7v5l-4 2v-7L3 6V4z"
+            />
+
+          </svg>
+
+          Filtros
+
+        </button>
+
+      </div>
+
+      <!-- MENÚ -->
+      <nav class="flex gap-6 uppercase text-sm tracking-widest text-gray-300">
+
+        <a href="index.html" class="hover:text-white transition">
+          Inicio
+        </a>
+
+        <a href="contacto.html" class="hover:text-white transition">
+          Contacto
+        </a>
+
+        <a href="prefre.html" class="hover:text-white transition">
+          FAQ
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- PANEL FILTROS -->
+  <div
+    id="panelFiltros"
+    class="fixed top-0 left-[-320px] w-[300px] h-full bg-zinc-950 border-r border-zinc-800 z-[999] transition-all duration-300 overflow-y-auto"
+  >
+
+    <!-- HEADER -->
+    <div class="flex justify-between items-center p-6 border-b border-zinc-800">
+
+      <h2 class="text-2xl font-black uppercase tracking-widest">
+        Filtros
+      </h2>
+
+      <button
+        id="cerrarFiltro"
+        class="text-3xl text-gray-400 hover:text-white transition"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="p-6">
+
+      <h3 class="uppercase text-sm tracking-widest text-gray-500 mb-4">
+        Categorías
+      </h3>
+
+      <div class="flex flex-col gap-4">
+
+        <button
+          class="filtroBtn text-left bg-zinc-900 border border-zinc-700 px-5 py-4 rounded-2xl hover:border-white transition"
+          data-filtro="todas"
+        >
+          Todas
+        </button>
+
+        <button
+          class="filtroBtn text-left bg-zinc-900 border border-zinc-700 px-5 py-4 rounded-2xl hover:border-white transition"
+          data-filtro="oversized"
+        >
+          Oversized
+        </button>
+
+        <button
+          class="filtroBtn text-left bg-zinc-900 border border-zinc-700 px-5 py-4 rounded-2xl hover:border-white transition"
+          data-filtro="compresion"
+        >
+          Compresión
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TÍTULO -->
+  <section class="pt-36 pb-10 px-6">
+
+    <div class="max-w-7xl mx-auto text-center">
+
+      <h2 class="text-5xl md:text-6xl font-black uppercase mb-6 tracking-widest">
+        VIRTUM
+      </h2>
+
+      <p class="text-gray-400 text-lg">
+        Built in Darkness.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- BUSCADOR -->
+  <section class="px-6 pb-10">
+
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4">
+
+      <input
+        type="text"
+        id="buscador"
+        placeholder="Buscar prendas..."
+        class="flex-1 bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-4 text-white outline-none focus:border-white transition"
+      >
+
+      <button
+        id="botonBuscar"
+        class="bg-white text-black font-bold uppercase tracking-widest px-8 py-4 rounded-2xl hover:bg-gray-300 transition"
+      >
+        Buscar
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="pb-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div id="productos" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- PRODUCTO 1 -->
+        <div class="producto compresion bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+          <img
+            src="img/shacompre.jpeg"
+            alt="Compresión Shark"
+            class="w-full h-96 object-cover"
+          >
+
+          <div class="p-6">
+
+            <span class="text-sm uppercase tracking-widest text-gray-500">
+              Compresión
+            </span>
+
+            <h3 class="text-2xl font-bold mt-2 mb-2">
+              Gymshark Storm
+            </h3>
+
+            <p class="text-gray-400 mb-4">
+              Playera de compresión para entrenamiento.
+            </p>
+
+            <span class="text-2xl font-black block mb-6">
+              $320 MXN
+            </span>
+
+            <a
+              href="https://wa.me/524112111060"
+              target="_blank"
+              class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+            >
+              Comprar
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="producto compresion bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+          <img
+            src="img/darkcopre.jpeg"
+            alt="Virtum Compression"
+            class="w-full h-96 object-cover"
+          >
+
+          <div class="p-6">
+
+            <span class="text-sm uppercase tracking-widest text-gray-500">
+              Compresión
+            </span>
+
+            <h3 class="text-2xl font-bold mt-2 mb-2">
+              Breathe Divinity
+            </h3>
+
+            <p class="text-gray-400 mb-4">
+              Compresión edición limitada.
+            </p>
+
+            <span class="text-2xl font-black block mb-6">
+              $320 MXN
+            </span>
+
+            <a
+              href="https://wa.me/524112111060"
+              target="_blank"
+              class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+            >
+              Comprar
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- PRODUCTO 3 -->
+        <div class="producto oversized bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+          <img
+            src="img/demon.jpeg"
+            alt="Oversized Demon"
+            class="w-full h-96 object-cover"
+          >
+
+          <div class="p-6">
+
+            <span class="text-sm uppercase tracking-widest text-gray-500">
+              Oversized
+            </span>
+
+            <h3 class="text-2xl font-bold mt-2 mb-2">
+              Youngla Demon Slayer
+            </h3>
+
+            <p class="text-gray-400 mb-4">
+              Colaboración con Demon Slayer.
+            </p>
+
+            <span class="text-2xl font-black block mb-6">
+              $420 MXN
+            </span>
+
+            <a
+              href="https://wa.me/524112111060"
+              target="_blank"
+              class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+            >
+              Comprar
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- PRODUCTO 4 -->
+        <div class="producto oversized bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+          <img
+            src="img/oc.jpeg"
+            alt="Civil Regime"
+            class="w-full h-96 object-cover"
+          >
+
+          <div class="p-6">
+
+            <span class="text-sm uppercase tracking-widest text-gray-500">
+              Oversized
+            </span>
+
+            <h3 class="text-2xl font-bold mt-2 mb-2">
+              Civil Regime
+            </h3>
+
+            <p class="text-gray-400 mb-4">
+              Oversized edición Power Puff Girls.
+            </p>
+
+            <span class="text-2xl font-black block mb-6">
+              $390 MXN
+            </span>
+
+            <a
+              href="https://wa.me/524112111060"
+              target="_blank"
+              class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+            >
+              Comprar
+            </a>
+
+          </div>
+
+        </div>
+
+<!-- PRODUCTO 5 -->
+<div class="producto oversized bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/youndemon.jpeg"
+    alt="Youngla Oversized"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Oversized
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Youngla Demon Slayer
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Colaboración con Demon Slayer.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $420 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTO 6 -->
+<div class="producto oversized bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/youoverdemon.jpeg"
+    alt="Youngla Oversized Black"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Oversized
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Youngla Demon Slayer
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Oversized edición anime.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $420 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTO 7 -->
+<div class="producto compresion bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/csam.jpeg"
+    alt="Gymshark Onyx"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Compresión
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Gymshark Onyx
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Compresión negro y morado.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $350 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTO 8 -->
+<div class="producto compresion bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/c1.jpeg"
+    alt="Gymshark Onyx V5"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Compresión
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Gymshark Onyx V5
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Compresión negro con detalles.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $350 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTO 9 -->
+<div class="producto oversized bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/od.jpeg"
+    alt="Breathe Divinity"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Oversized
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Breathe Divinity
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Oversized estilo gótico.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $390 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTO 10 -->
+<div class="producto compresion bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/c3.jpeg"
+    alt="Breathe Divinity Compression"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Compresión
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Breathe Divinity
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Compresión negra con detalles.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $320 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTO 11 -->
+<div class="producto compresion bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/cs.jpeg"
+    alt="Youngla Superman"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Compresión
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Youngla Superman
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Compresión edición Superman.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $320 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTO 12 -->
+<div class="producto compresion bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:scale-105 transition duration-300">
+
+  <img
+    src="img/cb.jpeg"
+    alt="Youngla Batman"
+    class="w-full h-96 object-cover"
+  >
+
+  <div class="p-6">
+
+    <span class="text-sm uppercase tracking-widest text-gray-500">
+      Compresión
+    </span>
+
+    <h3 class="text-2xl font-bold mt-2 mb-2">
+      Youngla Batman
+    </h3>
+
+    <p class="text-gray-400 mb-4">
+      Compresión edición Batman.
+    </p>
+
+    <span class="text-2xl font-black block mb-6">
+      $320 MXN
+    </span>
+
+    <a
+      href="https://wa.me/524112111060"
+      target="_blank"
+      class="block text-center bg-white text-black font-black uppercase tracking-widest py-3 rounded-2xl hover:bg-gray-300 transition"
+    >
+      Comprar
+    </a>
+
+  </div>
+
+</div>
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-10">
+
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+
+      <h2 class="text-2xl font-black tracking-widest">
+        VIRTUM
+      </h2>
+
+      <p class="text-gray-500 text-sm">
+        © 2026 VIRTUM. Todos los derechos reservados.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+
+    const buscador = document.getElementById("buscador");
+    const botonBuscar = document.getElementById("botonBuscar");
+
+    const productos = document.querySelectorAll(".producto");
+    const filtros = document.querySelectorAll(".filtroBtn");
+
+    // PANEL
+    const abrirFiltro = document.getElementById("abrirFiltro");
+    const cerrarFiltro = document.getElementById("cerrarFiltro");
+    const panelFiltros = document.getElementById("panelFiltros");
+
+    abrirFiltro.addEventListener("click", () => {
+
+      panelFiltros.style.left = "0";
+
+    });
+
+    cerrarFiltro.addEventListener("click", () => {
+
+      panelFiltros.style.left = "-320px";
+
+    });
+
+    // BUSCADOR
+    function buscarProductos() {
+
+      const texto = buscador.value.toLowerCase();
+
+      productos.forEach(producto => {
+
+        const contenido = producto.textContent.toLowerCase();
+
+        if (contenido.includes(texto)) {
+
+          producto.style.display = "block";
+
+        } else {
+
+          producto.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+    botonBuscar.addEventListener("click", buscarProductos);
+
+    buscador.addEventListener("keyup", function(event) {
+
+      if (event.key === "Enter") {
+
+        buscarProductos();
+
+      }
+
+    });
+
+    // FILTROS
+    filtros.forEach(filtro => {
+
+      filtro.addEventListener("click", () => {
+
+        const categoria = filtro.dataset.filtro;
+
+        productos.forEach(producto => {
+
+          if (
+            categoria === "todas" ||
+            producto.classList.contains(categoria)
+          ) {
+
+            producto.style.display = "block";
+
+          } else {
+
+            producto.style.display = "none";
+
+          }
+
+        });
+
+        // CERRAR PANEL
+        panelFiltros.style.left = "-320px";
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
